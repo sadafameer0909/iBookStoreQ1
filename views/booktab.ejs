@@ -1,0 +1,29 @@
+<!-- views/books.ejs -->
+
+<h2>Book Table</h2>
+
+<hr>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Book Name</th>
+            <th>Publisher Name</th>
+            <th>Author Name</th>
+            <th>Image</th>
+            <!-- Add more table headers as needed -->
+        </tr>
+    </thead>
+    <tbody>
+        <% books.forEach(book => { %>
+            <tr>
+                <td><%= book.book_name %></td>
+                <td><%= book.publisher_name %></td>
+                <td><%= book.author_name %></td>
+                <td><img src="<%= book.imageUrl %>" alt="<%= book.book_name %> Image" style="max-width: 100px;"></td>
+                <!-- Add other table cells as needed -->
+            </tr>
+        <% }) %>
+    </tbody>
+</table>
+</body>
+</html>
